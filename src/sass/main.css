@@ -1,0 +1,191 @@
+@import url("https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@400;500;600;700;800&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Baloo Da 2", cursive;
+  overflow-x: hidden;
+  position: relative;
+  min-height: 100vh;
+}
+
+#noticBox {
+  overflow: hidden;
+}
+
+.notic {
+  margin: 0 auto;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.notic span {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  display: inline-block;
+  color: #fff;
+  padding-top: 8px;
+  padding-left: 100%;
+  will-change: transform;
+  -webkit-animation: notic 20s linear infinite;
+          animation: notic 20s linear infinite;
+}
+
+.notic span:hover {
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+}
+
+@-webkit-keyframes notic {
+  0% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+    overflow: hidden;
+  }
+  100% {
+    overflow: hidden;
+    -webkit-transform: translate(-100%, 0);
+            transform: translate(-100%, 0);
+  }
+}
+
+@keyframes notic {
+  0% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+    overflow: hidden;
+  }
+  100% {
+    overflow: hidden;
+    -webkit-transform: translate(-100%, 0);
+            transform: translate(-100%, 0);
+  }
+}
+
+#karjokrom {
+  background: #1d3a7c;
+  color: white;
+}
+
+#karjokrom .left_box h2 {
+  word-spacing: 0.2rem;
+}
+
+.activityCompnent {
+  bottom: 38%;
+  -webkit-transform: translateY(50%);
+          transform: translateY(50%);
+}
+
+.activityCompnent .activity .activity-image {
+  position: relative;
+  width: 45px;
+  height: 40px;
+  overflow: hidden;
+  margin-top: 4px;
+}
+
+.activityCompnent .activity .activity-text-link {
+  position: absolute;
+  right: 20px;
+  z-index: 100;
+  width: 145px;
+  height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  -webkit-transform: translateX(200%);
+          transform: translateX(200%);
+  -webkit-transition: -webkit-transform 200ms linear;
+  transition: -webkit-transform 200ms linear;
+  transition: transform 200ms linear;
+  transition: transform 200ms linear, -webkit-transform 200ms linear;
+  color: #000;
+  text-align: center;
+  font-size: 0.7rem;
+  z-index: 100;
+  font-size: 18px;
+}
+
+.activityCompnent .activity .activity-text-link img {
+  width: 80px;
+  height: 45px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  overflow: hidden;
+  -webkit-transform: scale(1.8);
+          transform: scale(1.8);
+  z-index: 100;
+}
+
+.activityCompnent .activity:hover .activity-text-link {
+  -webkit-transform: translateX(-10%);
+          transform: translateX(-10%);
+  z-index: 100;
+}
+
+.topicCardImage {
+  -webkit-transition: 0.2s linear;
+  transition: 0.2s linear;
+}
+
+.topicCardImage:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition: 0.2s linear;
+  transition: 0.2s linear;
+  cursor: pointer;
+}
+
+.slick-slider .slick-list {
+  padding: 1rem 0;
+}
+
+footer {
+  margin-top: auto;
+  background: #1d3a7c;
+  color: white;
+}
+
+.location {
+  width: 70vw;
+  height: 80vh;
+}
+
+.ResponsiveIcon {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .location {
+    width: 90vw;
+    margin: auto;
+  }
+  .ResponsiveIcon {
+    display: block;
+  }
+}
+
+#authentication-modal {
+  background: rgba(0, 0, 0, 0.9);
+}
+/*# sourceMappingURL=main.css.map */
