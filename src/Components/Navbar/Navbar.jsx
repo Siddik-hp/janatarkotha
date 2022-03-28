@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import { firstLink, scoundLink } from './../../Apis/MenuLink'
 import icons from './../../Apis/Navbar';
 
@@ -73,15 +74,17 @@ const Navbar = () => {
                 <div className="container px-2 mx-auto flex justify-between items-center flex-row pr-4">
                     {/* ==========Left box =========== */}
                     <div className="flex items-center cursor-pointer space-x-4 ">
-                        <a href="/">
+                        <Link to="/">
                             <figure>
                                 <img src="/assets/images/header/navbar.png" alt="Navbar log" className=' object-cover' style={{ width: "80px" }} />
                             </figure>
-                        </a>
+                        </Link>
                         <div className="hidden md:block">
-                            <h1 className='font-medium text-xl text-white'>
-                                জনতার সরকার
-                            </h1>
+                            <Link to="/">
+                                <h1 className='font-medium text-xl text-white'>
+                                    জনতার সরকার
+                                </h1>
+                            </Link>
                         </div>
                     </div>
 

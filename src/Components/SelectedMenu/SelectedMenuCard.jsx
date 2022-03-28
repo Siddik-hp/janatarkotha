@@ -1,15 +1,22 @@
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 
-const AlokPathCard = ({ id, cetagory, title1, title2, title3, image }) => {
+const SelectedMenuCard = ({ id, title, date, subtitle, image }) => {
     const navigate = useNavigate()
-    const TopicComponents = () => {
-        navigate(`/topic/${id}`, { state: { id: id, title1: title1, title2: title2, title3: title3, image: image } })
+    const toComponents = () => {
+        navigate(`/fullpage/${id}`, { state: { id: id, title: title, image: image, date: date, subtitle: subtitle } })
     }
     return (
         <div className="card  py-2 px-2 mx-2 rounded-xl  shadow-xl z-100">
             <div className="flex justify-between my-3 text-gray-400  ">
-                <h1>{cetagory}</h1>
+                <div className=" flex gap-3 mb-2">
+                    <a href="#">
+                        <img src="/assets/images/jonotarkotha/facebook.png" className="w-8" alt="fb" />
+                    </a>
+                    <a href="#">
+                        <img src="/assets/images/jonotarkotha/instagram.png" className="w-8" alt="insta" />
+                    </a>
+                </div>
                 <h1 className="">
                     {" "}
                     স্থিতি :{" "}
@@ -18,7 +25,7 @@ const AlokPathCard = ({ id, cetagory, title1, title2, title3, image }) => {
                     </span>
                 </h1>
             </div>
-            <a onClick={() => { TopicComponents() }}>
+            <a onClick={() => { toComponents() }} >
                 <div className="relative overflow-hidden z-20">
                     <img
                         src={image}
@@ -37,12 +44,12 @@ const AlokPathCard = ({ id, cetagory, title1, title2, title3, image }) => {
                 </div>
             </a>
             <div className=" py-3 space-y-3 px-3 pb-12">
-                <p className="text-indigo-500">{title1}</p>
-                <p className="text-yellow-600 border-b-2 pb-1">{title2}</p>
-                <p className="text-indigo-500"> {title3}</p>
+                <p className="text-indigo-500">{title}</p>
+                <p className="text-yellow-600 border-b-2 pb-1">শেষ তারিখ :  {date}</p>
+                <p className="text-indigo-500"> {subtitle}</p>
             </div>
         </div>
     );
 };
 
-export default AlokPathCard;
+export default SelectedMenuCard;

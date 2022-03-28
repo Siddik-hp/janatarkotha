@@ -3,7 +3,7 @@ import { footerlink1, footerlink2, contactInfo } from './../../Apis/FooterLink';
 const Footer = () => {
     return (
         <>
-            <footer className='py-4 px-4'>
+            <footer className=' footer py-4 px-4'>
                 {/* Main Box */}
                 <div className='mainBox flex gap-x-10  lg:flex-row flex-col  '>
                     {/* left Box */}
@@ -12,7 +12,7 @@ const Footer = () => {
                         <h1>
                             সমস্ত কপিরাইট সংরক্ষিত বাংলাদেশ সরকার
                         </h1>
-                        <a href="#">
+                        <a href="#" target="_blank">
                             <img src="/assets/images/footer/logo2.png" alt="logo2" className="w-80 mx-auto" />
                         </a>
                     </div>
@@ -35,7 +35,7 @@ const Footer = () => {
                                     footerlink2.map(({ id, text, link }) => {
                                         return (
                                             <>
-                                                <a href={link} key={id} className="hover:text-cyan-400 transition-all mb-3 block">{text}</a>
+                                                <a target={"_blank"} href={link} key={id} className="hover:text-cyan-400 transition-all mb-3 block">{text}</a>
                                             </>
                                         )
                                     })
@@ -46,16 +46,16 @@ const Footer = () => {
                                     আমাদের সাথে সংযোগ করুন
                                 </h1>
                                 <div className='flex mt-4 space-x-4'>
-                                    <a href="#">
+                                    <a href="#" target={"_blank"}>
                                         <img src="/assets/images/header/nav-icon/fb.png" alt="fb" className='w-10' />
                                     </a>
-                                    <a href="#">
+                                    <a href="#" target={"_blank"}>
                                         <img src="/assets/images/header/nav-icon/insta.png" alt="fb" className='w-10' />
                                     </a>
-                                    <a href="#">
+                                    <a href="#" target={"_blank"}>
                                         <img src="/assets/images/header/nav-icon/twitter.png" alt="fb" className='w-10' />
                                     </a>
-                                    <a href="#">
+                                    <a href="#" target={"_blank"}>
                                         <img src="/assets/images/header/nav-icon/youtube.png" alt="fb" className='w-10' />
                                     </a>
                                 </div>
@@ -64,16 +64,16 @@ const Footer = () => {
                         {/* scound */}
                         <div>
                             <h1>গুরুত্বপূর্ণ যোগাযোগ নম্বর</h1>
-                            <div className='grid lg:grid-cols-4 grid-cols-2 gap-6 mt-5'>
+                            <div className='grid lg:grid-cols-4 grid-cols-2 lg:gap-6 gap-3 mt-5'>
                                 {
                                     contactInfo.map(({ id, text, number, link }) => {
                                         return (
-                                            <a href={link}>
-                                                <div key={id} className='border-2  rounded-xl border-cyan-400 text-center py-4'>
-                                                    <h1 className='text-xl mb-3'>
+                                            <a href={link} target="_blank">
+                                                <div key={id} className='border-2  rounded-xl border-cyan-400 text-center lg:py-4 py-2'>
+                                                    <h1 className='lg:text-xl mb-3'>
                                                         {text}
                                                     </h1>
-                                                    <h1 className='text-4xl font-semibold text-cyan-500'>
+                                                    <h1 className='lg:text-4xl text-3xl font-semibold text-cyan-500'>
                                                         {number}
                                                     </h1>
                                                 </div>
@@ -91,16 +91,16 @@ const Footer = () => {
                         পরিকল্পনা ও বাস্তবায়নে :
                     </h1>
                     <div className='mt-2 flex justify-center flex-wrap items-center space-x-6'>
-                        <a href="#">
+                        <a href="#" target="_blank">
                             <img src="/assets/images/footer/bcc.png" alt="bcc" className='w-14 ' />
                         </a>
-                        <a href="#">
+                        <a href="#" target="_blank">
                             <img src="/assets/images/footer/db.png" alt="ict" className='w-32' />
                         </a>
-                        <a href="#">
+                        <a href="#" target="_blank">
                             <img src="/assets/images/footer/ict.png" alt="ict" className='w-32' />
                         </a>
-                        <a href="#">
+                        <a href="#" target="_blank">
                             <img src="/assets/images/footer/dsa.png" alt="dsa" className='w-32' />
                         </a>
                     </div>

@@ -5,13 +5,13 @@ const JonotarKothaCard = ({ link, image, title, date }) => {
         <div className="card  py-2 px-2 mx-2 rounded-xl  shadow-xl z-100">
             <div className=" flex gap-3 mb-2">
                 <a href="#">
-                    <img src="assets/images/jonotarkotha/facebook.png" className="w-8" alt="fb" />
+                    <img src="/assets/images/jonotarkotha/facebook.png" className="w-8" alt="fb" />
                 </a>
                 <a href="#">
-                    <img src="assets/images/jonotarkotha/instagram.png" className="w-8" alt="insta" />
+                    <img src="/assets/images/jonotarkotha/instagram.png" className="w-8" alt="insta" />
                 </a>
                 <a href="#">
-                    <img src="assets/images/jonotarkotha/facebook.png" className="w-8" alt="twitter" />
+                    <img src="/assets/images/jonotarkotha/facebook.png" className="w-8" alt="twitter" />
                 </a>
             </div>
             <a href={link} target="_blank">

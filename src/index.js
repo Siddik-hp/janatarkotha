@@ -1,5 +1,6 @@
 import { BrowserRouter } from "react-router-dom";
 import "flowbite";
+import "flowbite/dist/datepicker";
 import React from "react";
 import ReactDOM from "react-dom";
 import App from "./App";

@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import Slider from "react-slick";
 import KarjokromApi from "../../Apis/KarjokromApi";
-
+import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 function SamplePrevArrow(props) {
     const { className, style, onClick } = props;
     return (
@@ -25,11 +26,8 @@ function SampleNextArrow(props) {
     );
 }
 export default class KarjokromSlider extends Component {
-    constructor(props) {
-        super(props);
-        this.next = this.next.bind(this);
-        this.previous = this.previous.bind(this);
-    }
+
+
     next() {
         this.slider.slickNext();
     }
@@ -90,20 +88,20 @@ export default class KarjokromSlider extends Component {
                             return (
                                 <div className=" " style={{ width: "148px", outline: "none" }} key={id}>
                                     <div className="" style={{ width: "100%" }}>
-                                        <a href={link} className="text-white relative cursor-pointer mb-2 flex items-center justify-evenly flex-col gap-1 ">
+                                        <Link to={`${link}`} className="text-white relative cursor-pointer mb-2 flex items-center justify-evenly flex-col gap-1 ">
                                             <figure>
                                                 <img src={image} alt="not found" className="w-32 h-24 object-cover object-top rounded-lg" />
                                             </figure>
                                             <div className="text-xs text-center absolute bottom-4 w-28 z-20 ">
                                                 {text}
                                             </div>
-                                        </a>
+                                        </Link>
                                     </div>
                                 </div>
                             )
                         })
                     }
-                </Slider>
+                </Slider >
                 <div className="float-right mb-2 lg:mr-12 mt-4 space-x-4 ">
                     <button onClick={this.previous} className="button rounded-full p-2 border-2 border-cyan-300 active:border-cyan-500" >
                         <svg xmlns="http://www.w3.org/2000/svg" className="lg:w-6 lg:h-6 w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -117,7 +115,7 @@ export default class KarjokromSlider extends Component {
                     </button>
                 </div>
 
-            </div>
+            </div >
         );
     }
 }

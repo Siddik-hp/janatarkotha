@@ -13,8 +13,6 @@
 body {
   font-family: "Baloo Da 2", cursive;
   overflow-x: hidden;
-  position: relative;
-  min-height: 100vh;
 }
 
 #noticBox {
@@ -161,7 +159,6 @@ body {
 }
 
 footer {
-  margin-top: auto;
   background: #1d3a7c;
   color: white;
 }
